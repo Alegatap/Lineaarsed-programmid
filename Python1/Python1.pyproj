@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>32b60cce-705e-4d82-8c89-a57a4bc3633b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Python1.py</StartupFile>
+    <StartupFile>Too1_1.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
