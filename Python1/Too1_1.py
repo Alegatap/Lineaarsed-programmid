@@ -98,20 +98,23 @@ print("\n"
 #Ülesanne 9
 #Arvutame kolmnurga ümbermõõdu. Loo kolm täisarvulist muutujat a, b, c.
 #Kasuta valem, mis arvutab kolmnurga ümbermõõdu (P=a+b+c)
-
-a=float(input("Sisesta esimese külje pikkus: "))
-b=float(input("Sisesta teine külje pikkus: "))
-c=float(input("Sisesta kolmanda külje pikkus: "))
-P=a+b+c
-print(f"Kolmnurga ümbermõõdu on {P}")
-
+try:
+    a=float(input("Sisesta esimese külje pikkus: "))
+    b=float(input("Sisesta teine külje pikkus: "))
+    c=float(input("Sisesta kolmanda külje pikkus: "))
+    P=a+b+c
+    print(f"Kolmnurga ümbermõõdu on {P}")
+except ValueError:
+    print("Palun sisessta number")
 #Ülesanne 10
 # Pitsa
 # Võtsite sõpradega (näiteks P inimest) suure pitsa, mille hind on 12,90 €.
 # Jätate teenindajale 10% jootraha.
 # Koosta programm, mis arvutab, kui palju igaüks peab maksma.
-
-Hind=float(input("Kui palju pitsa maksab? "))
-inimesed=int(input("Mitu inimest on? "))
-peabmaksma=round(Hind*1.1/inimesed,2)
-print(f"Igaüks peab maksma {peabmaksma} €")
+try:
+    Hind=float(input("Kui palju pitsa maksab? "))
+    inimesed=int(input("Mitu inimest on? "))
+    peabmaksma=round(Hind*1.1/inimesed,2)
+    print(f"Igaüks peab maksma {peabmaksma} €")
+except:
+    print("Palun sisessta number")
