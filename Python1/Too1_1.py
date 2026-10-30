@@ -18,6 +18,7 @@ pikkus=16.5
 kas_kaib_koolis=True
 print(f"vanus: {vanus}, tüüp on {type(vanus)},eesnimi: {eesnimi}, tüüp on {type(eesnimi)},pikkus: {pikkus}, tüüp on {type(pikkus)},kas_kaib_koolis: {kas_kaib_koolis}, tüüp on {type(kas_kaib_koolis)}")
 
+
 # Ülesanne 3
 kommid=randint(1,100)
 print(f"laual on {kommid} kommid")
