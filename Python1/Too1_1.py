@@ -1,4 +1,3 @@
-from platform import java_ver
 from random import randint
 from math import *
 # Ülesanne 1
