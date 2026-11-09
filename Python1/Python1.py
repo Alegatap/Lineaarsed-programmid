@@ -25,6 +25,7 @@ from math import *
 # b = float(input("Teine arv: "))
 # print(a, "-", b, "=",a - b)
 
+
 # print("jagamine")
 # a = float(input("Esimene arv: "))
 # b = float(input("Teine arv: "))
