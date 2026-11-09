@@ -48,15 +48,25 @@ except:
     print("sissesta täisarv")
 
 ####################################################################
-try:
-    vanus = int(input("Vanus: "))
-    if vanus >= 18:
-        juhiluba = input("Kas sul on juhiluba? (jah/ei) ")
-        if juhiluba.lower() == "jah":
-            print("Võid autot juhtida.")
+
+nimi = input("Sisesta nimi: ")
+print("Ainult tähed:", nimi.isalpha())
+print("Suurtähtedega:", nimi.isupper())
+print("Algab suurtähega:", nimi.istitle())
+if nimi.isalpha() and nimi.istitle():
+    print("Nimi sobib.")
+    try:
+        vanus = int(input(f"Tere, {nimi}! Kui vana sa oled?: "))
+        if vanus >= 18:
+            juhiluba = input("Kas sul on juhiluba? (jah/ei) ")
+            if juhiluba.lower() == "jah":
+                print("Võid autot juhtida.")
+            else:
+                print("Kõigepealt tee juhiload.")
         else:
-            print("Kõigepealt tee juhiload.")
-    else:
-        print("Oled autojuhtimiseks liiga noor.")
-except:
-    print("sissesta teie vanus arvutega")
+            print("Oled autojuhtimiseks liiga noor.")
+    except:
+        print("sissesta teie vanus arvutega")
+else:
+    print("Nimes tohib olla ainult tähti!")
+
