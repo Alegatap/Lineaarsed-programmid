@@ -1,72 +1,28 @@
-try:
-    x = int(input("sissesta arv: "))
-    if x > 0:
-        print("Positiivne arv")
-        print("See rida on ka if-i sees")
-    print("See rida täidetakse alati")
-except:
-    print("sissesta täisarv")
+# 1. Juku
+# Programm küsib eesnime. Kui nimi on Juku, kuvatakse „Lähme Jukuga kinno!“, muidu teatatakse, et täna kinno ei minda.
+# Programm peab Juku ära tundma ka siis, kui nimi on kirjutatud suurtähtedega (JUKU) või väiketähtedega (juku).
+# Kui nimi on kirjutatud ainult suurtähtedega, lisa märkus „Ära karju, Juku!“.
 
-####################################################################
-
-try:
-    x = int(input("Sisesta arv: "))
-    if x == 1:
-        print("Õige")
-    else:
-        print("Vale")
-except:
-        print("sissesta täisarv")
-
-####################################################################
-
-vastus = input("Kas soovid jätkata? (jah/ei) ")
-print("sinu vastus oli: ",vastus)
-# vastustype=type(vastus)
-# print("sinu tüüp on: ",vastustype)
-# vastus_on_tekst=vastus.isalpha()
-# print("kas see on tekst?",vastus_on_tekst)
-if vastus.isalpha():
-    if vastus.lower() == "jah":
-        print("Jätkame!")
-    else:
-        print("Head aega!")
-else:
-    print("Palun sisesta jah või ei")
-    
-####################################################################
-
-try:
-    x = int(input("Sisesta arv -5 kuni 5: "))
-    if x < -5:
-        print("Vähe")
-    elif -5 <= x <= 5:
-        print("OK")
-    else:
-        print("Palju")
-except:
-    print("sissesta täisarv")
-
-####################################################################
-
-nimi = input("Sisesta nimi: ")
-print("Ainult tähed:", nimi.isalpha())
-print("Suurtähtedega:", nimi.isupper())
-print("Algab suurtähega:", nimi.istitle())
-if nimi.isalpha() and nimi.istitle():
-    print("Nimi sobib.")
+nimi=input("Sissesta teie nimi: ")
+if nimi.lower() == "juku":
+    print("Lähme Jukuga kinno!")
+    if nimi.isupper():
+        print("Ära karju, Juku!")
     try:
-        vanus = int(input(f"Tere, {nimi}! Kui vana sa oled?: "))
-        if vanus >= 18:
-            juhiluba = input("Kas sul on juhiluba? (jah/ei) ")
-            if juhiluba.lower() == "jah":
-                print("Võid autot juhtida.")
-            else:
-                print("Kõigepealt tee juhiload.")
-        else:
-            print("Oled autojuhtimiseks liiga noor.")
+        vanus=int(input("Kui vana sa oled? "))
+        if 0 <= vanus < 6:
+            Pilet="tasuta"
+        elif 6 <= vanus < 14:
+            Pilet="Lastepilet"
+        elif 15 <= vanus < 65:
+            Pilet="täispilet"
+        elif 65 <= vanus < 120:
+            Pilet="Sooduspilet"
     except:
-        print("sissesta teie vanus arvutega")
+        print("Sissesta vanus numbriga!")
+    try:
+        print(f"Jutku vanus on {vanus} aastat, ta ostab {Pilet}")
+    except:
+       print("viga andmetes.")
 else:
-    print("Nimes tohib olla ainult tähti!")
-
+    print("täna kinno ei minda")
